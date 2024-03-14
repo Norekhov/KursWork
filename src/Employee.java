@@ -7,7 +7,7 @@ public class Employee {
     private static int idCounter = 0;
     private final int id;
 
-    public Employee(String surname, String name, String patronymic, int department, double salary) {
+    public Employee(String surname, String name, String patronymic, int department, double salary){
         this.surname = surname;
         this.name = name;
         this.patronymic = patronymic;

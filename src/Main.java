@@ -137,52 +137,51 @@ public class Main {
     }
 
 
-        public static void main (String[]args){
-            EMPLOYEE_BOOK[0] = new Employee("Иванов", "Иван", "Иванович", 1, 35_000);
-            EMPLOYEE_BOOK[1] = new Employee("Петров", "Петр", "Петрович", 2, 40_000);
-            EMPLOYEE_BOOK[2] = new Employee("Сидоров", "Иван", "Петрович", 3, 45_000);
-            EMPLOYEE_BOOK[3] = new Employee("Сидоров", "Петр", "Иванович", 4, 50_000);
-            EMPLOYEE_BOOK[4] = new Employee("Смольков", "Артем", "Игоревич", 5, 55_000);
-            EMPLOYEE_BOOK[5] = new Employee("Лебедев", "Игорь", "Андреевич", 1, 37_500);
-            EMPLOYEE_BOOK[6] = new Employee("Малышев", "Владислав", "Альбертович", 2, 42_500);
-            EMPLOYEE_BOOK[7] = new Employee("Белов", "Юрий", "Сергеевич", 3, 47_500);
-            EMPLOYEE_BOOK[8] = new Employee("Чернов", "Сергей", "Юрьевич", 4, 52_500);
-            EMPLOYEE_BOOK[9] = new Employee("Пятнов", "Евгений", "Евгеньевич", 5, 57_500);
+    public static void main(String[] args) {
+        EMPLOYEE_BOOK[0] = new Employee("Иванов", "Иван", "Иванович", 1, 35_000);
+        EMPLOYEE_BOOK[1] = new Employee("Петров", "Петр", "Петрович", 2, 40_000);
+        EMPLOYEE_BOOK[2] = new Employee("Сидоров", "Иван", "Петрович", 3, 45_000);
+        EMPLOYEE_BOOK[3] = new Employee("Сидоров", "Петр", "Иванович", 4, 50_000);
+        EMPLOYEE_BOOK[4] = new Employee("Смольков", "Артем", "Игоревич", 5, 55_000);
+        EMPLOYEE_BOOK[5] = new Employee("Лебедев", "Игорь", "Андреевич", 1, 37_500);
+        EMPLOYEE_BOOK[6] = new Employee("Малышев", "Владислав", "Альбертович", 2, 42_500);
+        EMPLOYEE_BOOK[7] = new Employee("Белов", "Юрий", "Сергеевич", 3, 47_500);
+        EMPLOYEE_BOOK[8] = new Employee("Чернов", "Сергей", "Юрьевич", 4, 52_500);
+        EMPLOYEE_BOOK[9] = new Employee("Пятнов", "Евгений", "Евгеньевич", 5, 57_500);
 
-            printEmployeeBook();
-            System.out.println("Общая сумма трат на зарплату составила " + getTotalSalary() + " рублей.");
-            System.out.println("");
-            System.out.println("Сотрудник с максимальной зарплатой: " + findMaxSalary());
-            System.out.println("");
-            System.out.println("Сотрудник с минимальной зарплатой: " + findMinSalary());
-            System.out.println("");
-            System.out.println("Средняя зарплата составила - " + getAverageSalary() + " рублей.");
-            System.out.println("");
-            printAllEmployee();
-            System.out.println("");
-            //повышенная сложность
-            // индексация ЗП
-            System.out.println("Проиндексированные ЗП:");
-            double index = 30; //укажите процент индексации
-            getIndexSalary(index);
-            System.out.println("");
+        printEmployeeBook();
+        System.out.println("Общая сумма трат на зарплату составила " + getTotalSalary() + " рублей.");
+        System.out.println("");
+        System.out.println("Сотрудник с максимальной зарплатой: " + findMaxSalary());
+        System.out.println("");
+        System.out.println("Сотрудник с минимальной зарплатой: " + findMinSalary());
+        System.out.println("");
+        System.out.println("Средняя зарплата составила - " + getAverageSalary() + " рублей.");
+        System.out.println("");
+        printAllEmployee();
+        System.out.println("");
+        //повышенная сложность
+        // индексация ЗП
+        System.out.println("Проиндексированные ЗП:");
+        double index = 30; //укажите процент индексации
+        getIndexSalary(index);
+        System.out.println("");
 
-            //информация по отделам
-            int department = 1;//введите номер отдела от 1 до 5
-            System.out.println("Сотрудник из отдела № " + department + " с минимальной зарплатой: " + getMinSalaryFromTheDepartment(EMPLOYEE_BOOK, department));
-            System.out.println("Сотрудник из отдела № " + department + " с максимальной зарплатой: " + getMaxSalaryFromTheDepartment(EMPLOYEE_BOOK, department));
-            System.out.println("Общая сумма затрат на ЗП в отделе № " + department + " равна: " + getTotalSalaryFromTheDepartment(EMPLOYEE_BOOK, department) + " рублей.");
-            System.out.println("Средняя ЗП в отделе № " + department + " равна: " + getAverageSalaryFromTheDepartment(EMPLOYEE_BOOK, department) + " рублей.");
-            int indexFromTheDepartment = 20;//введите процент индексации
-            System.out.println("После индексации, ЗП выглядит следующим образом:");
-            getIndexSalaryFromTheDepartment(EMPLOYEE_BOOK, department, indexFromTheDepartment);
-            System.out.println("Все сотрудники отдела № " + department + ":");
-            printEmployeesFromTheDepartment(EMPLOYEE_BOOK, department);
-            int salaryFromTheDepartment = 55_000;//введите интересующую ЗП
-            System.out.println("Все сотрудники отдела № " + department + " с зарплатой меньше " + salaryFromTheDepartment + " рублей.");
-            printEmployeesFromTheDepartmentMinSalary(EMPLOYEE_BOOK, department, salaryFromTheDepartment);
-            System.out.println("Все сотрудники отдела № " + department + " с зарплатой больше " + salaryFromTheDepartment + " рублей.");
-            printEmployeesFromTheDepartmentMaxSalary(EMPLOYEE_BOOK, department, salaryFromTheDepartment);
-        }
-
+        //информация по отделам
+        int department = 1;//введите номер отдела от 1 до 5
+        System.out.println("Сотрудник из отдела № " + department + " с минимальной зарплатой: " + getMinSalaryFromTheDepartment(EMPLOYEE_BOOK, department));
+        System.out.println("Сотрудник из отдела № " + department + " с максимальной зарплатой: " + getMaxSalaryFromTheDepartment(EMPLOYEE_BOOK, department));
+        System.out.println("Общая сумма затрат на ЗП в отделе № " + department + " равна: " + getTotalSalaryFromTheDepartment(EMPLOYEE_BOOK, department) + " рублей.");
+        System.out.println("Средняя ЗП в отделе № " + department + " равна: " + getAverageSalaryFromTheDepartment(EMPLOYEE_BOOK, department) + " рублей.");
+        int indexFromTheDepartment = 20;//введите процент индексации
+        System.out.println("После индексации, ЗП выглядит следующим образом:");
+        getIndexSalaryFromTheDepartment(EMPLOYEE_BOOK, department, indexFromTheDepartment);
+        System.out.println("Все сотрудники отдела № " + department + ":");
+        printEmployeesFromTheDepartment(EMPLOYEE_BOOK, department);
+        int salaryFromTheDepartment = 55_000;//введите интересующую ЗП
+        System.out.println("Все сотрудники отдела № " + department + " с зарплатой меньше " + salaryFromTheDepartment + " рублей.");
+        printEmployeesFromTheDepartmentMinSalary(EMPLOYEE_BOOK, department, salaryFromTheDepartment);
+        System.out.println("Все сотрудники отдела № " + department + " с зарплатой больше " + salaryFromTheDepartment + " рублей.");
+        printEmployeesFromTheDepartmentMaxSalary(EMPLOYEE_BOOK, department, salaryFromTheDepartment);
     }
+}
